@@ -17,7 +17,7 @@ def add_text(slide, left, top, width, height, font_size, alignment, text):
 prs = Presentation()
 full_width = prs.slide_width
 
-data = pd.read_excel('prize_list.xlsx')
+data = pd.read_excel('상장목록.xlsx')
 prizes = data['상']
 students = data['학생']
 
