@@ -6,8 +6,8 @@ answers = []
 
 
 def start():
-    yes.place(relx=0.3, rely=0.5, anchor="center")
-    no.place(relx=0.7, rely=0.5, anchor="center")
+    yes.place(relx=0.3, rely=0.5, anchor=tk.CENTER)
+    no.place(relx=0.7, rely=0.5, anchor=tk.CENTER)
     selected.set('nothing')
 
     label.configure(text=questions.pop(0))
@@ -43,7 +43,7 @@ def end():
             mbti += results[i][1]
 
     label.configure(text='당신의 MBTI는 ' + mbti + '입니다.')
-    label.place(relx=0.5, rely=0.5, anchor="center")
+    label.place(relx=0.5, rely=0.5, anchor=tk.CENTER)
     button.place_forget()
 
 
@@ -58,6 +58,6 @@ selected = tk.StringVar()
 yes = tk.Radiobutton(window, text="Yes", font=font, fg='blue', variable=selected, value='yes')
 no = tk.Radiobutton(window, text="No", font=font, fg='red', variable=selected, value='no')
 
-label.place(relx=0.5, rely=0.2, anchor="center")
-button.place(relx=0.5, rely=0.8, anchor="center")
+label.place(relx=0.5, rely=0.2, anchor=tk.CENTER)
+button.place(relx=0.5, rely=0.8, anchor=tk.CENTER)
 window.mainloop()
