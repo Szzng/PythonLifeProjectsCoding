@@ -1,5 +1,8 @@
 from bs4 import BeautifulSoup
 import requests
+from gtts import gTTS
+from playsound import playsound
+import time
 
 
 def create_soup(url):
@@ -24,13 +27,20 @@ current_temp = float(current_temp.replace("현재 온도", "").replace("°", "")
 morning_rain = float(morning_rain.replace("강수확률", "").replace("%", ""))
 afternoon_rain = float(afternoon_rain.replace("강수확률", "").replace("%", ""))
 
-result = f"[오늘의 날씨]\n현재 온도 : {current_temp}˚ 강수확률 : 오전 {morning_rain}%, 오후 {afternoon_rain}%"
-print(result)
+result = f"[오늘의 날씨]\n현재 온도 : {current_temp}˚, 강수확률 : 오전 {morning_rain}%, 오후 {afternoon_rain}%"
+text = result + ' 입니다.'
 
 if current_temp < -5:
-    print("오늘 날씨가 정말 추워요! 옷을 두껍게 입으세요!")
+    text += '오늘 날씨가 정말 추워요! 옷을 두껍게 입으세요!'
 elif current_temp > 30:
-    print("오늘 날씨가 매우 더워요! 물을 많이 마시고, 햇빛에 지나치게 노출되지 않도록 주의하세요!")
+    text += '오늘 날씨가 정말 더워요! 물을 많이 마시고, 햇빛에 많이 노출되지 않도록 주의하세요!'
 
 if (morning_rain > 60) or (afternoon_rain > 60):
-    print('오늘 비가 올 확률이 높아요! 우산을 챙기세요!')
+    text += '오늘은 비가 올 확률이 높아요! 우산을 챙기세요!'
+
+text += ' 오늘 하루도 행복하세요!'
+print(text)
+tts = gTTS(text=text, lang='ko')
+tts.save('weathercaster.mp3')
+time.sleep(3)
+playsound('weathercaster.mp3')
