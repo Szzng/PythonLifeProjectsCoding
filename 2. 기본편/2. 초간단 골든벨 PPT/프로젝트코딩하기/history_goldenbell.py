@@ -1,5 +1,5 @@
 from pptx import Presentation
-from pptx.util import Cm, Pt
+from pptx.util import Pt
 from pptx.enum.text import PP_ALIGN
 
 # 프레젠테이션 만들기
