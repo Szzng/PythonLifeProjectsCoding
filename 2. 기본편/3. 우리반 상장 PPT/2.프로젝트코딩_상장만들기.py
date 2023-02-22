@@ -38,4 +38,4 @@ for i in range(len(data)):  # data의 개수만큼 반복
     add_text(slide, 0, 13, full_width, 0, 20, PP_ALIGN.CENTER, '2030년 01월 30일')
     add_text(slide, 0, 14.8, full_width, 0, 30, PP_ALIGN.CENTER, '너의 친구 룡룡이')
 
-prs.save("result.pptx")
+prs.save("상장.pptx")

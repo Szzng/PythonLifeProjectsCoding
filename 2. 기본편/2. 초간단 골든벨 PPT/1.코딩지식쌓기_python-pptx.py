@@ -35,4 +35,4 @@ paragraph.font.bold = True
 paragraph.text = "크고 굵은 글씨의 문단을 추가해봅시다."
 
 # 프레젠테이션 파일을 저장하기
-prs.save("basic.pptx")
+prs.save("연습용.pptx")
