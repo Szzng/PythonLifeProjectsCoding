@@ -7,7 +7,7 @@ colors = ['orange', 'skyblue', 'yellow']
 
 i = 0
 while True:
-    t.forward(i)
+    t.fd(i)
     t.color(colors[i % 3])
-    t.left(119)
+    t.lt(119)
     i += 1
