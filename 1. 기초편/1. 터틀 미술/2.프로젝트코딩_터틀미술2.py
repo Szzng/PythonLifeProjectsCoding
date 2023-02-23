@@ -5,9 +5,9 @@ t.speed(0)
 t.shape('turtle')
 colors = ['red', 'orange', 'yellow', 'green', 'blue', 'purple']
 
-for i in range(100):
+for i in range(300):
     t.penup()
-    t.goto(random.randint(-300, 300), random.randint(-300, 300))
+    t.goto(random.randint(-350, 350), random.randint(-350, 350))
     t.pendown()
 
     t.color(random.choice(colors))
