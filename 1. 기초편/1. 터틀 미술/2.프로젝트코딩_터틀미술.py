@@ -4,6 +4,7 @@ t.speed(0)
 t.shape('turtle')
 t.bgcolor('black')
 colors = ['orange', 'skyblue', 'yellow']
+
 i = 0
 while True:
     t.forward(i)

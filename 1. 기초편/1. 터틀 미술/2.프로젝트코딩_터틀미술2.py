@@ -3,11 +3,12 @@ import random
 
 t.speed(0)
 t.shape('turtle')
-colors = ['red', 'orange', 'yellow', 'green', 'blue', 'purple']
+t.bgcolor('black')
+colors = ['deeppink', 'orange', 'gold', 'greenyellow', 'deepskyblue', 'magenta']
 
 for i in range(300):
     t.penup()
-    t.goto(random.randint(-350, 350), random.randint(-350, 350))
+    t.goto(random.randint(-400, 400), random.randint(-400, 400))
     t.pendown()
 
     t.color(random.choice(colors))
