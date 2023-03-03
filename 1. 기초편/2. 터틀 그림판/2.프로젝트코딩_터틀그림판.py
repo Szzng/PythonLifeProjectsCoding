@@ -7,9 +7,8 @@ t.onkeypress(go_right, 'Right')
 t.onkeypress(go_up, 'Up')
 t.onkeypress(go_left, 'Left')
 t.onkeypress(go_down, 'Down')
-t.onkeypress(pen_updown, 'Tab')
+t.onkeypress(pen_updown, 'Return')
 t.onkeypress(change_color, 'c')  # c 대소문자 구분
-t.onkeypress(erase, 'Return')
 t.onkeypress(clear, 'Escape')  # esc key
 
 t.listen()

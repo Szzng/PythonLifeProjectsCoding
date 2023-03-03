@@ -32,12 +32,7 @@ def pen_updown():
 def change_color():
     colors = ['red', 'green', 'blue', 'orange', 'black']
     choice = random.choice(colors)
-    t.pencolor(choice)
-
-
-def erase():
-    bgcolor = t.bgcolor()
-    t.pencolor(bgcolor)
+    t.color(choice)
 
 
 def clear():
