@@ -1,4 +1,4 @@
-from control_functions import *
+from myfunctions import *
 import turtle as t
 
 t.shape('turtle')
