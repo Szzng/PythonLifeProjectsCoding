@@ -21,6 +21,7 @@ button.place(relx=0.5, rely=0.9, anchor=tk.CENTER)
 
 selected = tk.StringVar()
 selected.set('nothing')
+
 food = ['치킨', '피자', '떡볶이', '햄버거', '돈까스', '라면']
 for i in range(len(food)):
     radiobutton = tk.Radiobutton(window, text=food[i], font=font, variable=selected, value=food[i])
