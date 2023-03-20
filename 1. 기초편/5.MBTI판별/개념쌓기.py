@@ -11,11 +11,11 @@ def submit():
 
 window = tk.Tk()
 window.title("좋아하는 음식 조사")
-window.geometry('600x800')
+window.geometry('800x800')
 
-font = ('맑은 고딕', 30, 'bold')
-label = tk.Label(window, text="다음 중 가장 좋아하는 음식을 고르세요!", font=font, wraplength=500)
-button = tk.Button(window, text="완료", font=font, width=20, height=2, command=submit)
+font = ('맑은 고딕', 25, 'bold')
+label = tk.Label(window, text="다음 중 가장 좋아하는 음식을 고르세요!", font=font)
+button = tk.Button(window, text="완료", font=font, width=15, height=1, bg='green', command=submit)
 label.place(relx=0.5, rely=0.1, anchor=tk.CENTER)
 button.place(relx=0.5, rely=0.9, anchor=tk.CENTER)
 

@@ -30,7 +30,7 @@ def go_next():
             button.configure(text='다음 질문')
         else:  # 질문이 끝났다면
             label.configure(text='결과가 나왔습니다. 당신의 MBTI는!')
-            button.configure(text='결과 보기', command=end)
+            button.configure(text='결과보기', command=end)
             yes.place_forget()
             no.place_forget()
 
@@ -49,12 +49,12 @@ def end():
 
 
 window = tk.Tk()
-window.title("MBTI 테스트")
+window.title("MBTI 판별 프로그램")
 window.geometry('640x400')
 
-font = ('맑은 고딕', 30, 'bold')
+font = ('맑은 고딕', 25, 'bold')
 label = tk.Label(window, text="당신의 MBTI는?", font=font, wraplength=500)
-button = tk.Button(window, text="시작하기", font=font, width=20, height=2, command=start)
+button = tk.Button(window, text="시작하기", font=font, width=15, height=1,  bg='pink', fg='white', command=start)
 label.place(relx=0.5, rely=0.2, anchor=tk.CENTER)
 button.place(relx=0.5, rely=0.8, anchor=tk.CENTER)
 
