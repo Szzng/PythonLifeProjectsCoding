@@ -10,11 +10,11 @@ for x in x_values:
     try:
         y.append(eval(formula))
     except:
-        print("잘못된 입력입니다. 올바른 함수식을 입력하세요.")
+        print("잘못 입력하셨습니다. 올바른 함수식을 입력하세요.")
         break
 
 if len(y) == len(x_values):
     plt.plot(x_values, y)
     plt.grid()
-    plt.savefig('입력받은 함수.png')
+    plt.savefig('함수 그래프.png')
     plt.show()
