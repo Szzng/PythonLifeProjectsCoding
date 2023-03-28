@@ -1,4 +1,4 @@
-import matplotlib.pyplot as plt
+from matplotlib import pyplot as plt
 
 x_values = range(-100, 101)
 y_values = []

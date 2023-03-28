@@ -1,6 +1,5 @@
-import matplotlib.pyplot as plt
+from matplotlib import pyplot as plt
 
-# x, x2, x3, x4 등등 예시로 넣기
 formula = input("x로 이루어진 함수식을 입력하세요. (예시: 3*x**3+2*x) : ")
 
 x_values = range(-100, 101)
