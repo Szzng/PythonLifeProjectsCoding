@@ -38,20 +38,20 @@ words = {
     '디저트': 6,
     '꿀잼': 20
 }
-brainImage = np.array(Image.open('brain.png'))
+
+brainimage = np.array(Image.open('brain.png'))
 
 wordcloud = WordCloud(
     font_path=r"C:\Windows\Fonts\malgun.ttf",
     width=800,
     height=800,
-    background_color='white',  # 배경색 (기본은 black)
-    colormap='rainbow',  # 단어색
-    mask=brainImage,
-    contour_width=5,  # contour 윤곽
+    background_color='white',
+    colormap='rainbow',
+    mask=brainimage,
+    contour_width=5,
     contour_color='steelblue',
 ).generate_from_frequencies(words)
 
-# 사이즈 설정 및 출력
 plt.figure(figsize=(10, 10))
 plt.imshow(wordcloud, interpolation="bilinear")
 plt.axis("off")

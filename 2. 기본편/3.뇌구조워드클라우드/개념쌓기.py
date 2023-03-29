@@ -2,14 +2,14 @@ from wordcloud import WordCloud
 from matplotlib import pyplot as plt
 
 words = {
-    '가족': 10,
-    '친구': 9,
+    '파이썬': 10,
+    '가족': 8,
     '뭐먹지': 8,
     '코딩': 7,
-    '파이썬': 6,
+    '친구': 6,
     '놀궁리': 5,
     '졸리다': 4,
-    '배고파': 1,
+    '배고파': 2,
 }
 
 wordcloud = WordCloud(
