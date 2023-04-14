@@ -1,7 +1,6 @@
 from bs4 import BeautifulSoup
 import requests
 
-# 미래에 주소나 태그, 클래스 이름 등이 변할 수 있으나, 방법을 안다면 전혀 걱정없음.
 weather_url = "https://weather.naver.com/"
 res = requests.get(weather_url)
 soup = BeautifulSoup(res.text, "lxml")
