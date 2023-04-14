@@ -5,7 +5,7 @@ weather_url = "https://weather.naver.com/"
 res = requests.get(weather_url)
 soup = BeautifulSoup(res.text, "lxml")
 
-current_temp = soup.find("div", "weather_now").find("strong").get_text()
+current_temp = soup.find("strong", "current").get_text()
 rainfall = soup.find_all("span", "rainfall", limit=2)
 morning_rain = rainfall[0].get_text()
 afternoon_rain = rainfall[1].get_text()
