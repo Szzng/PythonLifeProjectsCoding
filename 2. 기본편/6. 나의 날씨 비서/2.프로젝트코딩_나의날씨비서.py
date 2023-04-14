@@ -4,18 +4,10 @@ from gtts import gTTS
 from playsound import playsound
 import time
 
-
-def create_soup(url):
-    headers = {"User-Agent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) "
-                             "Chrome/86.0.4240.183 Safari/537.36"}
-    res = requests.get(url, headers=headers)
-    soup = BeautifulSoup(res.text, "lxml")
-    return soup
-
-
 # 미래에 주소나 태그, 클래스 이름 등이 변할 수 있으나, 방법을 안다면 전혀 걱정없음.
 weather_url = "https://weather.naver.com/"
-soup = create_soup(weather_url)
+res = requests.get(weather_url)
+soup = BeautifulSoup(res.text, "lxml")
 
 current_temp = soup.find("div", "weather_now").find("strong").get_text()
 rainfall = soup.find_all("span", "rainfall", limit=2)

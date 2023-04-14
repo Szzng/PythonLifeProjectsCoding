@@ -1,17 +1,9 @@
 from bs4 import BeautifulSoup
 import requests
 
-
-def create_soup(url):
-    headers = {"User-Agent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) "
-                             "Chrome/86.0.4240.183 Safari/537.36"}
-    res = requests.get(url, headers=headers)
-    soup = BeautifulSoup(res.text, "lxml")
-    return soup
-
-
 gilbut = "https://www.gilbut.co.kr/"
-soup = create_soup(gilbut)
+res = requests.get(gilbut)
+soup = BeautifulSoup(res.text, "lxml")
 
 site_name = soup.find("h1", "sitename").get_text()
 
