@@ -1,8 +1,5 @@
 from bs4 import BeautifulSoup
 import requests
-from gtts import gTTS
-from playsound import playsound
-import time
 
 # 미래에 주소나 태그, 클래스 이름 등이 변할 수 있으나, 방법을 안다면 전혀 걱정없음.
 weather_url = "https://weather.naver.com/"
@@ -31,7 +28,3 @@ if (morning_rain > 60) or (afternoon_rain > 60):
 
 text += ' 오늘 하루도 행복하세요!'
 print(text)
-tts = gTTS(text=text, lang='ko')
-tts.save('weathercaster.mp3')
-time.sleep(3)
-playsound('weathercaster.mp3')
