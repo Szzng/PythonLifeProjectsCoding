@@ -4,7 +4,7 @@ number = random.randint(1, 100)
 count = 0
 
 while True:
-    answer = int(input('내가 고른 숫자를 맞춰 봐!'))
+    answer = int(input('내가 고른 숫자를 맞혀 봐!'))
     count += 1
 
     if answer == number:
