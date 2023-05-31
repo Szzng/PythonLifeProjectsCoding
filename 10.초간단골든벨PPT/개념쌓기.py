@@ -1,3 +1,4 @@
+from collections import abc
 from pptx import Presentation
 from pptx.util import Cm, Pt
 

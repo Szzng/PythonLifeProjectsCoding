@@ -1,4 +1,5 @@
 import pandas as pd
+from collections import abc
 from pptx import Presentation
 from pptx.util import Cm, Pt
 from pptx.enum.text import PP_ALIGN
