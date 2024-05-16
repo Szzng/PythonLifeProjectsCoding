@@ -1,16 +1,12 @@
 # terminal을 열고, 필요한 라이브러리를 설치합니다.
-# pip install selenium webdriver_manager
+# pip install selenium
 
 from selenium import webdriver
-from selenium.webdriver.chrome.service import Service
 from selenium.webdriver.common.by import By
-from webdriver_manager.chrome import ChromeDriverManager
-from selenium.webdriver.chrome.options import Options
 import time
 
 # 크롬 드라이버 설정
-options = Options()
-driver = webdriver.Chrome(service=Service(ChromeDriverManager().install()), options=options)
+driver = webdriver.Chrome()
 
 try:
     # 네이버 날씨 페이지 열기
